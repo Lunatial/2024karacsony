@@ -1,0 +1,106 @@
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/Hand-drawn-Christmas-tree-on-transparent-PNG.png);
+    background-repeat: repeat;
+    background-size: 100px; /* Ritkább mintázat */
+    background-color: #f7f7f7; /* Halvány alapszín */
+    opacity: 0.1; /* Csak a háttérkép áttetszősége */
+    z-index: -1; /* Háttérként jelenik meg */
+}
+
+.container {
+    width: 660px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    border-radius: 16px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.486);
+    transition: box-shadow 0.2s ease;
+}
+
+.container img:hover {
+    box-shadow: 12px 5px 9px rgba(0, 0, 0, 0.486);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.overlay h1 {
+    color: white;
+    font-size: 2rem;
+    font-family: "Permanent Marker", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.overlay p {
+    color: white;
+    font-family: "Permanent Marker", serif;
+    /* text-align: center; */
+}
+
+a {
+    text-decoration: none;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+#chicken {
+    font-size: 3rem;
+}
+
+@media only screen and (max-width: 772px) {
+    .container,
+    .overlay,
+    .container img {
+      width: 95%;
+    }
+
+    .overlay {
+        padding: 0.25rem;
+    }
+
+    .overlay h1 {
+        font-size: 1.15rem;
+    }
+
+    .overlay p {
+        font-size: 0.8rem;
+    }
+  }
