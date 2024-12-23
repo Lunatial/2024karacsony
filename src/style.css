@@ -71,14 +71,22 @@ body::before {
 .overlay p {
     color: white;
     font-family: "Permanent Marker", serif;
-    /* text-align: center; */
+}
+
+#bottomPart {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    font-size: 2rem;
+    font-family: "Permanent Marker", serif;
+    font-weight: 400;
 }
 
 a {
     text-decoration: none;
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
 }
 
 #chicken {
@@ -93,14 +101,25 @@ a {
     }
 
     .overlay {
+        top: -2rem;
         padding: 0.25rem;
     }
 
     .overlay h1 {
+        color: black;
         font-size: 1.15rem;
     }
 
     .overlay p {
         font-size: 0.8rem;
+    }
+
+    #bottomPart {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.15rem;
+        bottom: 0;
+        left: 0;
+        width: 100%;
     }
   }
